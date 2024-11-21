@@ -1,0 +1,147 @@
+body {
+    background-color: #f7fafc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Difficulty buttons */
+.difficulty-btn {
+    background-color: #38a169;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin: 5px 0;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.difficulty-btn:hover {
+    background-color: #2f855a;
+}
+
+/* Sudoku grid layout */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.sudoku-cell {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sudoku-cell:focus {
+    outline: none;
+    border-color: #38a169;
+}
+
+/* Style for blocks (3x3 sub-grids) */
+.sudoku-cell:nth-child(3n) {
+    border-right: 2px solid #4a5568;
+}
+
+.sudoku-row:nth-child(3n) .sudoku-cell {
+    border-bottom: 2px solid #4a5568;
+}
+
+/* Timer and congratulatory message */
+#timer {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Fireworks container */
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Game over section (hidden initially) */
+#game-over-section {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-over-btn {
+    background-color: #3182ce;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.correct {
+    background-color: #c6f6d5 !important; /* Soft light green */
+}
+
+.incorrect {
+    background-color: #fefcbf; /* Soft yellow */
+}
+
+.wrong-entry {
+    background-color: #f56565 !important; /* Red background for wrong entry */
+}
+
+/* Highlight row */
+.highlight-row {
+    background-color: rgba(56, 161, 105, 0.3); /* Soft green background for highlight */
+}
+
+/* Score display */
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Restart and Hint buttons */
+#restart-btn, #hint-btn {
+    background-color: #3182ce;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hint-btn {
+    background-color: #ed8936;
+}
+
+#hint-btn:hover {
+    background-color: #dd6b20;
+}

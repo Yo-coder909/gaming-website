@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Games Hub</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar container styles */
+        .navbar {
+            background: linear-gradient(135deg, #00bcd4, #ff4081);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 3px solid #ff4081;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Navbar links styling */
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #ff4081;
+            transform: translateY(-3px);
+        }
+
+        .navbar a:active {
+            transform: translateY(1px);
+        }
+
+        /* Mobile responsive styling */
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                width: 100%;
+                text-align: left;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        /* Content section styling */
+        .content {
+            padding: 50px 40px;
+            text-align: center;
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            margin: 30px auto;
+            max-width: 900px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        /* Content heading */
+        .content h1 {
+            color: #00ff00;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.6);
+        }
+
+        /* Content paragraph */
+        .content p {
+            font-size: 1.2rem;
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Interactive Button Styles */
+        .interactive-button {
+            display: inline-block;
+            padding: 18px 36px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #ff4081, #00bcd4);
+            border-radius: 30px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            letter-spacing: 2px;
+        }
+
+        .interactive-button:hover {
+            background: linear-gradient(135deg, #00bcd4, #ff4081);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .interactive-button:active {
+            transform: scale(1.02);
+        }
+
+        /* Footer style */
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+            padding: 20px;
+            background-color: #222;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 50;
+        }
+
+        /* Page Load Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Glowing Border Effect for Interactive Buttons */
+        .interactive-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .interactive-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            animation: glowing 1.5s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
+            }
+
+            100% {
+                box-shadow: 0 0 20px #00bcd4, 0 0 30px #00bcd4, 0 0 40px #00bcd4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="home.html">🏠Home</a>
+        <a href="about.html">🎮About</a>
+       
+    </div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <h1>Welcome to the Computer Games Hub</h1>
+        <p>Step into a world where you’re in control! Whether you're a Sudoku solver, a memory master, a Tic Tac Toe tactician, or an Endgame Enforcer, the choice is yours. Pick the game that suits your mood, set your strategy, and dive into hours of fun. Your challenge awaits—ready to take it on?</p>
+        <a href="home.html" class="interactive-button">Check out the rules for the games</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Computer Games Hub by Ananya Sonkar| All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

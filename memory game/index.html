@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Memory Game</h1>
+    <select id="difficulty" onchange="startGame()">
+        <option value="easy">Easy (8 pairs)</option>
+        <option value="medium">Medium (12 pairs)</option>
+        <option value="hard">Hard (16 pairs)</option>
+    </select>
+    <div class="timer" id="timer">Time: 0s</div>
+    <div class="lives" id="lives">Lives: ❤️❤️❤️❤️</div>
+    <div class="game-board" id="game-board"></div>
+    <button onclick="startGame()">Restart Game</button>
+    <div class="status" id="status"></div>
+    <div class="celebration" id="celebration">🎉 Congratulations! 🎉</div>
+    <div class="time-up-animation" id="time-up">⏰ Time's Up! ⏰</div>
+    <div class="retry" id="retry"></div>
+    <script src="script.js"> </script>
+</body>
+
+</html>

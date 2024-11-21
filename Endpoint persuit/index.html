@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EndPoint Pursuit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h2>Welcome to the Pathfinding Challenge!</h2>
+      <p>Choose your difficulty level and get ready to test your skills.</p>
+      <button class="btn" onclick="startGame('Easy')">Easy</button>
+      <button class="btn" onclick="startGame('Medium')">Medium</button>
+      <button class="btn" onclick="startGame('Hard')">Hard</button>
+      <button class="btn" onclick="showHowToPlay()">How to Play</button>
+    </div>
+
+    <!-- Game Information -->
+    <div class="info" id="game-info" style="display: none;">
+      <h2>Dynamic Pathfinding Game</h2>
+      <p id="message">Use arrow keys to move the player to the red endpoint!</p>
+      <div class="stats">
+        <p>Steps Taken: <span id="steps">0</span></p>
+        <p>Remaining Moves: <span id="remainingMoves">30</span></p>
+        <p>Lives: <span id="lives"></span></p>
+      </div>
+    </div>
+
+    <!-- Grid (hidden until game starts) -->
+    <div class="grid" id="grid"></div>
+
+    <!-- Restart Button -->
+    <div id="restart-container" class="hidden">
+      <button id="restart-button" class="btn" onclick="restartGame()">Restart</button>
+    </div>
+  </div>
+
+  <!-- How to Play Modal -->
+<div id="how-to-play-modal">
+  <div id="how-to-play-content">
+    <h2>How to Play</h2>
+    <p>Use the arrow keys to move the player from the starting position to the red endpoint. Avoid obstacles!</p>
+    <p><strong>Objective:</strong> Reach the red endpoint while avoiding obstacles and moving obstacles. You have limited lives and moves!</p>
+    
+    <!-- Arrow keys instructions -->
+    <div class="arrow-keys">
+      <div class="arrow-row">
+        <div class="arrow" id="arrow-up">↑</div>
+      </div>
+      <div class="arrow-row">
+        <div class="arrow" id="arrow-left">←</div>
+        <div class="arrow" id="arrow-right">→</div>
+      </div>
+      <div class="arrow-row">
+        <div class="arrow" id="arrow-down">↓</div>
+      </div>
+    </div>
+    
+    <button id="close-how-to-play" onclick="closeHowToPlay()">Close</button>
+  </div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

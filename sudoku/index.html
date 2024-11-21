@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.2.0/dist/index.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Difficulty Selection Screen -->
+    <div class="game-container" id="difficulty-container">
+        <img src="https://i.ibb.co/N1R1wwy/logo.png" alt="logo" class="w-64 m-auto">
+        <h2>Select Difficulty</h2>
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="game-container" id="game-container" style="display:none;">
+        <!-- Timer -->
+        <div id="timer">Time: 00:00</div>
+        <!-- Score -->
+        <div id="score">Score: 0</div>
+
+        <!-- Sudoku Grid Section -->
+        <div id="grid"></div>
+
+        <!-- Game Over Section (Appears when the game is completed) -->
+        <div id="game-over-section">
+            <button id="restart-btn" class="game-over-btn">Restart Game</button>
+        </div>
+
+        <!-- Hint Button -->
+        <button id="hint-btn" class="game-over-btn" style="display:none;">Hint</button>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>

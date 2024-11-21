@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">Tic-Tac-Toe</div>
+    <div class="options">
+        <button id="twoPlayer">Play Against Another Player</button>
+        <button id="computer">Play Against Computer</button>
+    </div>
+    <div id="nameInput" class="name-input" style="display: none;">
+        <p>Enter Player 1 Name:</p>
+        <input type="text" id="player1Name" placeholder="Player 1" />
+        <div id="player2Input" style="display: none;">
+            <p>Enter Player 2 Name:</p>
+            <input type="text" id="player2Name" placeholder="Player 2" />
+        </div>
+        <button id="startGameButton">Next</button>
+    </div>
+    <div id="tokenSelection" class="token-selection" style="display: none;">
+        <p id="tokenPrompt"></p>
+        <button id="tokenX">X</button>
+        <button id="tokenO">O</button>
+    </div>
+    <div id="game" style="display: none;">
+        <div class="board" id="board"></div>
+        <div class="status" id="status"></div>
+        <button class="reset" id="reset">Reset</button>
+    </div>
+
+    <audio id="winSound" src="https://www.soundjay.com/button/sounds/button-3.mp3" preload="auto"></audio>
+    <audio id="drawSound" src="https://www.soundjay.com/button/sounds/button-16.mp3" preload="auto"></audio>
+    <audio id="clickSound" src="https://www.soundjay.com/button/sounds/button-9.mp3" preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
+
